@@ -19,6 +19,7 @@ public class Status {
             case { it instanceof String}:
                 LOG.debug("It's a string!")
                 bodyString = body
+                break
             case null:
                 LOG.debug("It's null!")
                 break
