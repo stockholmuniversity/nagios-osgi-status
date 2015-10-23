@@ -6,7 +6,7 @@ public class StatusRoutes extends RouteBuilder {
 
   public void configure() throws Exception {
 
-    from("restlet:/status?restletMethod=GET")
+    from("restlet:/status?restletMethods=GET,POST")
       .beanRef("Status", "status")
       .to("log:FAX");
 
