@@ -14,9 +14,14 @@ public class Status {
             case { it instanceof InputStreamCache }:
                 InputStreamCache inputStreamCache = (InputStreamCache)body
                 bodyString = inputStreamCache.text
+                LOG.debug("It's a stream!")
                 break
             case { it instanceof String}:
+                LOG.debug("It's a string!")
                 bodyString = body
+            case null:
+                LOG.debug("It's null!")
+                break
             default:
                 LOG.error("Input object type ${body} not supported")
                 break
