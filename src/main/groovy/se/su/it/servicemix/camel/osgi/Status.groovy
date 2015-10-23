@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory
 import org.apache.camel.converter.stream.InputStreamCache
 
 public class Status {
-    private static final transient Logger LOG = LoggerFactory.getLogger(getClass())
+    private static final transient Logger LOG = LoggerFactory.getLogger(this)
 
     public Object status(Object body) {
         String bodyString = null
