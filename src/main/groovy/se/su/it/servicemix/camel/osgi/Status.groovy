@@ -1,34 +1,25 @@
-package se.su.it.servicemix.camel.osgi
+package se.su.it.servicemix.camel.osgi.status
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import org.apache.camel.converter.stream.InputStreamCache
+
+import javax.ws.rs.GET
+import javax.ws.rs.Path
+import javax.ws.rs.Produces
+import javax.ws.rs.core.Response
 
 public class Status {
     private static final transient Logger LOG = LoggerFactory.getLogger(this)
 
-    public Object status(Object body) {
-        String bodyString = null
-
-        switch (body) {
-            case { it instanceof InputStreamCache }:
-                InputStreamCache inputStreamCache = (InputStreamCache)body
-                bodyString = inputStreamCache.text
-                LOG.debug("It's a stream!")
-                break
-            case { it instanceof String}:
-                LOG.debug("It's a string!")
-                bodyString = body
-                break
-            case null:
-                LOG.debug("It's null!")
-                break
-            default:
-                LOG.error("Input object type ${body} not supported")
-                break
-        }
-
-        return "YEAH YEAH YEAH\n"
+    @GET
+    @Path("/status")
+    @Produces(["text/html"])
+    public Response status() {
+        Response response
+        def statusOutput = "Karaf Status: OK"
+        statusOutput = statusOutput + "\n"
+        response = Response.ok(statusOutput).status(Response.Status.OK).build()
+        return response
     }
 
 }
