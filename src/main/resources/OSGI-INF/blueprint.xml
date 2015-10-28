@@ -20,7 +20,7 @@
   <bean id="status" class="se.su.it.servicemix.camel.osgi.status.Status"/>
 
   <bean id="StatusRoutes"
-    class="se.su.it.servicemix.camel.osgi.StatusRoutes">
+    class="se.su.it.servicemix.camel.osgi.status.StatusRoutes">
   </bean>
 
   <camel:camelContext id="defaultCamelContext">
