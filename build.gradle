@@ -4,7 +4,7 @@ apply plugin: 'osgi'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 version = '1.0'
-group = 'se.su.it.servicemix.camel.osgi'
+group = 'se.su.it.servicemix.camel.osgi.status'
 description = "Stockholm University :: Nagios OSGi status"
 
 repositories {
@@ -22,9 +22,9 @@ dependencies {
 jar {
 
     manifest {
-        instruction 'Export-Package', 'se.su.it.servicemix.camel.osgi',
+        instruction 'Export-Package', 'se.su.it.servicemix.camel.osgi.status',
             '*'
-        instruction 'Import-Package', 'se.su.it.servicemix.camel.osgi',
+        instruction 'Import-Package', 'se.su.it.servicemix.camel.osgi.status',
             '*'
     }
 
