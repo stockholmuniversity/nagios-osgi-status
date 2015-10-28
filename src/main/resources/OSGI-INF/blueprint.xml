@@ -12,16 +12,14 @@
   <server xmlns="http://cxf.apache.org/blueprint/jaxrs" id="customerService">
 
     <serviceBeans>
-      <ref component-id="status"/>
+      <ref component-id="status" />
     </serviceBeans>
 
   </server>
 
-  <bean id="status" class="se.su.it.servicemix.camel.osgi.status.Status"/>
+  <bean id="status" class="se.su.it.servicemix.camel.osgi.status.Status" />
 
-  <bean id="StatusRoutes"
-    class="se.su.it.servicemix.camel.osgi.status.StatusRoutes">
-  </bean>
+  <bean id="StatusRoutes" class="se.su.it.servicemix.camel.osgi.status.StatusRoutes" />
 
   <camel:camelContext id="defaultCamelContext">
     <camel:routeBuilder ref="StatusRoutes"/>
