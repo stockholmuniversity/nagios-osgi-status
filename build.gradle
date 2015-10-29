@@ -29,17 +29,4 @@ jar {
             '*'
     }
 
-    println(configurations.compile.collect{it.name})
-
-    from {
-        configurations.compile.findAll {
-            if (it.name.contains("api-all")) {
-                return true
-            } else if (it.name.contains("mina-core")) {
-                return true
-            } else {
-                return false
-            }
-        }.collect{zipTree(it)}
-    }
 }
