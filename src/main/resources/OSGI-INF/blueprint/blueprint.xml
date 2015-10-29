@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
    - Copyright (c) 2013-, Simon Lundström <simlu@su.se>, IT Services, Stockholm University
    - All rights reserved.
@@ -28,7 +29,6 @@
    - ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
    - POSSIBILITY OF SUCH DAMAGE.
 -->
-<?xml version="1.0" encoding="UTF-8"?>
 <blueprint
   xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
