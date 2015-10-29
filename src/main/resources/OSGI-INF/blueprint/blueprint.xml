@@ -7,7 +7,7 @@
     http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
   ">
 
-  <bean id="status" class="se.su.it.servicemix.camel.osgi.status.Status" />
+  <bean id="Status" class="se.su.it.servicemix.camel.osgi.status.Status" />
 
   <bean id="StatusRoutes" class="se.su.it.servicemix.camel.osgi.status.StatusRoutes" />
 
