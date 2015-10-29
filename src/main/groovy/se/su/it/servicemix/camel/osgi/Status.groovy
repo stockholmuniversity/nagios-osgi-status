@@ -1,4 +1,4 @@
-package se.su.it.servicemix.camel.osgi.status
+package se.su.it.osgi.status
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
