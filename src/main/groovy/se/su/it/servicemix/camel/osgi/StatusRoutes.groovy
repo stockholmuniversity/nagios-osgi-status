@@ -8,7 +8,6 @@ public class StatusRoutes extends RouteBuilder {
 
     from("cxfrs://?resourceClass=se.su.it.osgi.status.Status")
       .beanRef("Status", "status")
-      .to("log:FAX");
 
   }
 
