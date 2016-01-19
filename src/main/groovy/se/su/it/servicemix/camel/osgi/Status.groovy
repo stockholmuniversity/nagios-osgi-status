@@ -1,5 +1,6 @@
 /*
 Copyright (c) 2013-, Simon Lundström <simlu@su.se>, IT Services, Stockholm University
+Copyright (c) 2016-, Johan Carlquist <jocar@su.se>, IT Services, Stockholm University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -46,8 +47,10 @@ public class Status {
     @Produces(["text/html"])
     public Response status() {
         Response response
-        def statusOutput = "Karaf Status: OK"
-        statusOutput = statusOutput + "\n"
+        def statusOutput = ""
+        def fqdn = java.net.InetAddress.getLocalHost().getHostName()
+        statusOutput = statusOutput + "Server: " + fqdn + "\n<br />\n"
+        statusOutput = statusOutput + "Karaf Status: OK" + "\n<br />\n"
         response = Response.ok(statusOutput).status(Response.Status.OK).build()
         return response
     }
