@@ -43,7 +43,7 @@ public class Status {
     private static final transient Logger LOG = LoggerFactory.getLogger(this)
 
     @GET
-    @Path("/status")
+    @Path("/")
     @Produces(["text/html"])
     public Response status() {
         Response response

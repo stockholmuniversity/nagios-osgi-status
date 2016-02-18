@@ -36,7 +36,7 @@ public class StatusRoutes extends RouteBuilder {
 
   public void configure() throws Exception {
 
-    from("cxfrs://?resourceClass=se.su.it.osgi.status.Status")
+    from("cxfrs:///status?resourceClass=se.su.it.osgi.status.Status")
       .beanRef("Status", "status")
 
   }
