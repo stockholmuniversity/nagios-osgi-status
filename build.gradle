@@ -1,6 +1,14 @@
+buildscript {
+  repositories {
+    maven {
+      url "https://maven.it.su.se/it.su.se/maven2"
+    }
+  }
+}
+
 apply plugin: 'groovy'
 apply plugin: 'osgi'
-apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -9,7 +17,9 @@ group = 'se.su.it.osgi.status'
 description = "Stockholm University :: Nagios OSGi status"
 
 repositories {
-    mavenCentral()
+  maven {
+    url "https://maven.it.su.se/it.su.se/maven2"
+  }
 }
 
 dependencies {
@@ -30,4 +40,19 @@ jar {
             '*'
     }
 
+}
+
+publishing {
+  publications {
+    mavenJava(MavenPublication) {
+      from components.java
+    }
+  }
+
+  repositories {
+    maven {
+      name "maven.it.su.se"
+      url "https://maven.it.su.se/nexus/content/repositories/it.su.se-gradle-deploy/"
+    }
+  }
 }
