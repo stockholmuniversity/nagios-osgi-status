@@ -16,7 +16,7 @@ apply plugin: 'maven-publish-auth'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-version = '1.2.0'
+version = '1.2.1'
 group = 'se.su.it.osgi.status'
 description = "Stockholm University :: Nagios OSGi status"
 
