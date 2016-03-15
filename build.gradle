@@ -3,12 +3,16 @@ buildscript {
     maven {
       url "https://maven.it.su.se/it.su.se/maven2"
     }
+    dependencies {
+      classpath 'org.hibernate.build.gradle:gradle-maven-publish-auth:2.0.1'
+    }
   }
 }
 
 apply plugin: 'groovy'
 apply plugin: 'osgi'
 apply plugin: 'maven-publish'
+apply plugin: 'maven-publish-auth'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
