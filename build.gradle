@@ -38,9 +38,9 @@ dependencies {
 jar {
 
   manifest {
-    instruction 'Export-Package', 'se.su.it.osgi.status',
+    instruction 'Export-Package', "se.su.it.osgi.status;version=\"$version\"",
     '*'
-    instruction 'Import-Package', 'se.su.it.osgi.status',
+    instruction 'Import-Package', "se.su.it.osgi.status;version=\"$version\"",
     '*'
   }
 
