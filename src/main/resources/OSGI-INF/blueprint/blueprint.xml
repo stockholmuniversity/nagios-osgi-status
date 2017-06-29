@@ -41,7 +41,7 @@
 
   <bean id="StatusRoutes" class="se.su.it.osgi.status.StatusRoutes" />
 
-  <camelContext xmlns="http://camel.apache.org/schema/blueprint">
+  <camelContext id="osgiStatus" xmlns="http://camel.apache.org/schema/blueprint">
     <routeBuilder ref="StatusRoutes"/>
   </camelContext>
 
